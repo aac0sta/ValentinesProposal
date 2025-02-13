@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine</title> 
+    <link rel="stylesheet" href="style.css" />
+    <script src="BeMyValentine.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body style="background-color: #FFDEE3; font-family: Arial black, sans-serif;"> 
+    <h1 style="text-align: center;">Hello Chef</h1> 
+    <h2 style="text-align: center;">I really hope this website actually turns out ok</h2>
+    <h2 style="text-align: center;">I have a VERY important question to ask</h2>
+    <h2 style="text-align: center;">Will you be my Valentine?</h2>
+
+    <div class="button-container">
+      <button id="yesButton" onclick="celebrate()">Yes</button> 
+      <img src="Images/spongebobhyped.jpg" class="hover-image yes-image" alt="Happy Image">
+      
+      <button id="noButton" onclick="grieve()">No</button>
+      <img src="Images/647.JPG" class="hover-image no-image" alt="Sad Image">
+    </div>
+
+    <div id="response" style="text-align: center; margin-top: 20px;"></div> 
+
+    <script>
+        function clearResponse() {
+            document.getElementById("response").innerHTML = ""; 
+        }
+
+        function celebrate() {
+            clearResponse(); 
+
+            let responseDiv = document.getElementById("response");
+
+            let textElement = document.createElement("h2");
+            textElement.textContent = "HOOORAYYY!!!";
+
+            let imgElement = document.createElement("img");
+            imgElement.src = "Images/purinwheart-removebg-preview.png";
+            imgElement.style.width = "500px";
+
+            responseDiv.appendChild(textElement);
+            responseDiv.appendChild(imgElement);
+        }
+
+        function grieve() {
+            clearResponse(); 
+
+            let responseDiv = document.getElementById("response");
+
+            let textElement = document.createElement("h2");
+            textElement.textContent = "what... why... are you sure?";
+
+            let imgElement = document.createElement("img");
+            imgElement.src = "Images/sadpuppyeyesemoji.png";
+
+            responseDiv.appendChild(textElement);
+            responseDiv.appendChild(imgElement);
+        }
+    </script>
+
+</body>
+</html>
